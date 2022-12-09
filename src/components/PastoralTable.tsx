@@ -63,7 +63,11 @@ export default function PastoralTable() {
     <>
       <Box w="100%" px={10} py={10}>
         <HStack mb={10}>
-          <Button colorScheme="blue" size="sm">
+          <Button
+            colorScheme="blue"
+            size="sm"
+            onClick={() => navigate("/new-pastor")}
+          >
             <AddIcon mr={2} /> New pastor
           </Button>
           <InputGroup size="md">
