@@ -7,6 +7,7 @@ import AdminPageNotFound from "./pages/AdminPageNotFound";
 import PastorDetails from "./pages/PastorDetails";
 import { LoginPage } from "./pages/LoginPage";
 import NewPastor from "./pages/NewPastor";
+import EditPastor from "./pages/EditPastor";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<PastoralTable />} />
             <Route path="pastors" element={<PastoralTable />} />
             <Route path="pastors/:pastorId" element={<PastorDetails />} />
+            <Route path="pastors/:pastorId/edit" element={<EditPastor />} />
             <Route path="new-pastor" element={<NewPastor />} />
           </Route>
           <Route path="/login" element={<LoginPage />} />

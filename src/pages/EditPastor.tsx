@@ -1,8 +1,6 @@
-import React, {useState} from "react";
 import {
     Box,
-    Button,
-    ButtonGroup,
+    Button, ButtonGroup,
     Center,
     Container,
     Divider,
@@ -12,17 +10,23 @@ import {
     Image,
     Spacer,
     Text,
-    VStack,
+    VStack
 } from "@chakra-ui/react";
-import {InfoPersoForm} from "../components/InfoPersoForm";
-import {TPMForm} from "../components/TPMForm";
-import {SkillForm} from "../components/SkillForm";
 import {DownloadIcon, EditIcon} from "@chakra-ui/icons";
-import {useNavigate} from 'react-router-dom';
+import {TPMForm} from "../components/TPMForm";
+import {InfoPersoForm} from "../components/InfoPersoForm";
+import {SkillForm} from "../components/SkillForm";
+import React, {useEffect} from "react";
+import {useNavigate, useParams} from 'react-router-dom';
 
+export default function EditPastor() {
+    const navigate = useNavigate();
+    const {pastorId} = useParams();
 
-export default function NewPastor() {
-    const navigate = useNavigate()
+    useEffect(() => {
+        console.log(`show pastor details of id:${pastorId}`);
+    }, [])
+
     return (
         <Flex direction="column">
             <Box pos="relative">
@@ -85,7 +89,7 @@ export default function NewPastor() {
                         Annuler
                     </Button>
                     <Button colorScheme="teal" size="lg" variant="outline">
-                        Valider
+                        Modifier
                     </Button>
                 </ButtonGroup>
             </Center>

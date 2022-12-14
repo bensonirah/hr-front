@@ -1,12 +1,5 @@
-import React, { ReactElement } from "react";
 import { Outlet } from "react-router-dom";
-import {
-  Box,
-  useColorModeValue,
-  Drawer,
-  DrawerContent,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, Drawer, DrawerContent, useDisclosure } from "@chakra-ui/react";
 import { SidebarContent } from "../components/SidebarContent";
 import { MobileNav } from "../components/MobileNav";
 

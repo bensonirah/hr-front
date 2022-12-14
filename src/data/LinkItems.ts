@@ -1,10 +1,5 @@
 interface LinkItemProps {
   name: string;
+  url: string;
 }
-export const LinkItems: Array<LinkItemProps> = [
-  { name: "Home" },
-  { name: "Trending" },
-  { name: "Explore" },
-  { name: "Favourites" },
-  { name: "Settings" },
-];
+export const LinkItems: Array<LinkItemProps> = [{ name: "Home", url: "/" }];
