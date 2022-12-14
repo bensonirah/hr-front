@@ -3,7 +3,6 @@ set -e
 
 image=$1
 port=$2
-
 git clone https://github.com/bensonirah/hr-front.git $image
 
 cd $image
